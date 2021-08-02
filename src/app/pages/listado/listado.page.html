@@ -10,7 +10,7 @@
 <ion-content>
   <div *ngFor="let contacto of productos | async">
     <ion-item >
-      <ion-label>
+      <ion-label (click)="editar(contacto)">
         <ion-img style="width: 100px;margin: auto;"
         [src]="contacto.imagen">
         </ion-img>
