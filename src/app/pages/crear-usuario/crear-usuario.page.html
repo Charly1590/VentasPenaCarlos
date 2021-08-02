@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="regresar()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="contacto.user"></ion-input>
+  </ion-item>,
+
+  <ion-item>
+    <ion-label>Contrasena</ion-label>
+    <ion-input [(ngModel)]="contacto.password"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+  
+</ion-content>

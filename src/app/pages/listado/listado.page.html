@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let contacto of productos | async">
+    <ion-item >
+      <ion-label>
+        <ion-img style="width: 100px;margin: auto;"
+        [src]="contacto.imagen">
+        </ion-img>
+        <h2>{{ contacto.nombre }}</h2>
+        <h3>{{ contacto.precio }}</h3>
+        <p>{{ contacto.color }}</p>
+      </ion-label>
+    </ion-item>
+  </div>
+
+</ion-content>
